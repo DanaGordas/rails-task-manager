@@ -1,11 +1,12 @@
-<h2>Update task</h2>
-
-<%= form_for(@task) do |t| %>
-  <%= t.label :title %>
-  <%= t.text_field :title %>
-  <%= t.label :details %>
-  <%= t.text_field :details %>
-  <%= t.label :completed %>
-  <%= t.text_field :completed %>
-  <%= t.submit %>
-<% end %>
+<div class="container mt-3">
+  <h2>Update task</h2>
+  <%= simple_form_for(@task) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :details %>
+    <%= f.label :completed %>
+    <%= f.check_box :completed %>
+    <br>
+    <br>
+    <%= f.submit "Update" %>
+  <% end %>
+</div>
